@@ -1,75 +1,60 @@
-# hotel-rose-landing
-<!doctype html>
-
-
-<main class="hero">
-<div class="main-photo" role="img" aria-label="Велика вілла з басейном"></div>
-
-
-<div style="display:flex;flex-direction:column;gap:14px">
-<div class="card">
-<h2>Вільні будинки</h2>
-<p class="lead">Оберіть віллу з реальними фото та ціною за добу. Швидке бронювання і прозорі умови.</p>
-
-
-<div class="gallery">
-<div class="item" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder'); background-size:cover; background-position:center"></div>
-<div class="item" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder'); background-size:cover; background-position:center"></div>
+export default function HotelRose() {
+return (
+<div className="min-h-screen bg-emerald-900 p-8 flex items-start justify-center">
+<div className="max-w-6xl w-full grid grid-cols-12 gap-6 items-start">
+{/* Left: Large photo */}
+<div className="col-span-5 bg-white/0 rounded-md overflow-hidden shadow-lg">
+<img src="https://picsum.photos/id/1018/600/420" alt="Modern villa with pool" className="w-full h-full object-cover block" style={{height: 420}} />
 </div>
 
 
-<div class="price-row">
-<div>
-<div style="font-size:13px;color:var(--muted)">Класична вілла</div>
-<div class="price">$100 <small>/ доба</small></div>
+{/* Center: Info card */}
+<div className="col-span-5 bg-gray-100 rounded-md p-6 shadow-md flex flex-col justify-between" style={{height: 420}}>
+<header className="mb-2">
+<div className="flex items-center gap-3">
+<div className="text-2xl font-semibold">hotel rose <span className="text-pink-500">♡</span></div>
 </div>
-<div>
-<div style="font-size:13px;color:var(--muted)">Сучасна вілла</div>
-<div class="price">$150 <small>/ доба</small></div>
-</div>
+<div className="text-xs text-gray-500 mt-1">найкращий готель в україні</div>
+</header>
+
+
+<main className="flex-1 mt-4">
+<h2 className="text-2xl font-medium text-gray-800">вільні будинки</h2>
+<p className="text-gray-600 mt-2">вартість на добу</p>
+
+
+<div className="mt-4 grid grid-cols-2 gap-3 items-center">
+<div className="flex flex-col items-center">
+<img src="https://picsum.photos/id/1025/300/200" alt="House option 1" className="w-full rounded-md object-cover" style={{height: 100}}/>
+<div className="mt-2 text-sm font-bold">$ <span className="text-2xl">100</span></div>
 </div>
 
 
-</div>
-
-
-<div class="card" style="display:flex;gap:12px;align-items:center;justify-content:space-between">
-<div>
-<strong>Швидке бронювання</strong>
-<div style="color:var(--muted);font-size:13px">Підтвердження миттєво, оплата онлайн.</div>
-</div>
-<a href="#" style="background:var(--brand);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600">Забронювати</a>
+<div className="flex flex-col items-center">
+<img src="https://picsum.photos/id/1031/300/200" alt="House option 2" className="w-full rounded-md object-cover" style={{height: 100}}/>
+<div className="mt-2 text-sm font-bold">$ <span className="text-2xl">150</span></div>
 </div>
 </div>
 </main>
 
 
-<aside>
-<div class="team">
-<h3>Команда</h3>
-<div class="members">
-<div class="member"><div class="av">А</div><div><div>Антон Сонячний</div><small>CEO</small></div></div>
-<div class="member"><div class="av">М</div><div><div>Микита Кавун</div><small>Operations</small></div></div>
-<div class="member"><div class="av">Т</div><div><div>Тимофій Грибний</div><small>Design</small></div></div>
-<div class="member"><div class="av">С</div><div><div>Саша Лісний</div><small>Marketing</small></div></div>
-</div>
+<footer className="mt-4 text-sm text-gray-500">&nbsp;</footer>
 </div>
 
 
-<div class="card">
-<h3>Контакти</h3>
-<p style="margin:6px 0 0 0;color:var(--muted);font-size:14px">email: hello@hotelrose.example<br>тел: +380 00 000 0000</p>
-</div>
+{/* Right: Team card */}
+<div className="col-span-2 flex items-start justify-center">
+<aside className="bg-gray-200 rounded-md p-6 shadow-sm w-full max-w-xs" style={{height: 200}}>
+<h3 className="text-lg font-semibold mb-2">команда</h3>
+<ul className="text-gray-800 leading-relaxed">
+<li>антон сонячний</li>
+<li>микита кавун</li>
+<li>тимофій грибний</li>
+<li>саша лісний</li>
+</ul>
 </aside>
-
-
-<footer>© Hotel Rose — Демонстраційний макет. Збережіть цей файл як index.html і завантажте в GitHub.</footer>
 </div>
-
-
-<script>
-// Невелика функція для демонстрації — відкриває модаль з підтвердженням (placeholders)
-document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click', e=>{e.preventDefault(); alert('Функція демо: тут буде форма бронювання.')}))
-</script>
-</body>
-</html>
+</div>
+</div>
+);
+}
