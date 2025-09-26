@@ -1,5 +1,5 @@
 import React from 'react';
-
+<html>
 export default function HotelRose() {
   return (
     <div className="min-h-screen bg-emerald-900 p-8 flex items-start justify-center">
@@ -81,5 +81,5 @@ export default function HotelRose() {
         </div>
       </div>
     </div>
-  );
-}
+    </html>
+    
